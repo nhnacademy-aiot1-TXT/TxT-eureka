@@ -6,8 +6,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
-@EnableWebSecurity(debug = false)
+/**
+ * spring security 설정 class
+ *
+ * @author jongsikk
+ * @version 1.0.0
+ */
 @Configuration
+@EnableWebSecurity(debug = false)
 public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
