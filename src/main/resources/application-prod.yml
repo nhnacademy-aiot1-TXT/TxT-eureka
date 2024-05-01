@@ -2,7 +2,7 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: peer1
+    hostname: instance
   client:
     service-url:
       defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@133.186.220.58:8761/eureka/
