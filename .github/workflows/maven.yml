@@ -64,5 +64,5 @@ jobs:
             docker rm -f $(docker ps -q -f "name=TxT-eureka")
             docker rmi $(docker images ${{ secrets.DOCKER_REPO }} -q)
             docker pull ${{ secrets.DOCKER_REPO }}
-            docker run -d -p 8761:8761 --name TxT-eureka ${{ secrets.DOCKER_REPO }}
+            docker run -d --network config_txt -p 8761:8761 --name TxT-eureka ${{ secrets.DOCKER_REPO }}
 
